@@ -18,20 +18,20 @@ The solution is divided into three analytical modules:
 * **Goal:** Predict wait times to manage crowd flow.
 * **Model:** **Random Forest Regressor** (Chosen over Linear Regression due to non-linear crowd dynamics).
 * **Performance:** Reduced RMSE from ~200 min (raw data) to **9.83 min** (cleaned).
-* [cite_start]**Key Insight:** Time of day and specific attractions (e.g., *Wadon*) drive 71% of congestion[cite: 501].
+* **Key Insight:** Time of day and specific attractions (e.g., *Wadon*) drive 71% of congestion.
 
 ### 2. 🍔 Market Basket Analysis (Sales)
 * **Goal:** Design high-conversion menu bundles.
 * **Algorithm:** **Apriori Algorithm** (Association Rule Mining).
 * **Key Findings:**
-    * [cite_start]*The Social Cluster:* Beer, Wine, Nachos, and Pretzels show high lift (3.77)[cite: 674].
-    * [cite_start]*The Healthy Cluster:* Salad and Juice have a correlation of 0.81[cite: 615].
+    * *The Social Cluster:* Beer, Wine, Nachos, and Pretzels show high lift (3.77).
+    * *The Healthy Cluster:* Salad and Juice have a correlation of 0.81.
 
 ### 3. 🎫 Customer Segmentation (Marketing)
 * **Goal:** Predict "Gold" vs. "Silver" pass purchases.
 * **Model:** **XGBoost Classifier**.
-* [cite_start]**Performance:** Achieved **86% Accuracy** in distinguishing pass tiers[cite: 696].
-* [cite_start]**Key Driver:** "Club Member" status was the #1 predictor (38% importance)[cite: 745].
+* **Performance:** Achieved **86% Accuracy** in distinguishing pass tiers.
+* **Key Driver:** "Club Member" status was the #1 predictor (38% importance).
 
 ## 📂 Project Structure
 ```bash
@@ -43,21 +43,18 @@ The solution is divided into three analytical modules:
 │   └── Executive_Presentation.pdf # Final consulting deck
 └── requirements.txt
 ```
-🚀 Strategic Recommendations
-Based on the data, we recommended the board implement:
+## 🚀 Strategic Recommendations
+Based on our data analysis, we propose three high-impact interventions to optimize park performance:
 
+1.  **Implement Virtual Queues for "Wadon":** The "Wadon" attraction is the single largest driver of congestion, accounting for **16% of wait time variance**. A virtual queue will disperse crowds from this bottleneck.
+2.  **Launch "Social Combo" Bundles:** Our Market Basket Analysis identified a strong correlation (Lift: 3.77) between **Nachos, Pretzels, Beer, and Wine**. Bundling these items targets the high-value "Social Cluster" to increase revenue.
+3.  **Deploy Dynamic Staffing:** The predictive model identified **11:00 – 15:00** as the critical peak window. Shifting staff breaks away from this period will maximize throughput capacity when demand is highest.
 
-Virtual Queues for the "Wadon" ride to disperse the 16% congestion driver.
+## 👨‍💻 Contributors
+This project was executed by a specialized data science consulting team:
 
-
-"Social Combo" Bundles (Nachos + Beer) to target high-lift groups.
-
-
-Dynamic Staffing shifts to cover the 11:00–15:00 peak window.
-
-👨‍💻 Contributors
-Maulik Dilipbhai Chopda - Wait Time Analysis & Operational Strategy
-
-Mehmet Fatih Özdemir - Market Basket Analysis
-
-Kasun Gayashan Pinto Ranwalage - Customer Classification
+| Consultant | Role & Focus Area | Key Contribution |
+| :--- | :--- | :--- |
+| **Maulik Dilipbhai Chopda** | **Wait Time Analysis & Operational Strategy** | Developed the Random Forest model (RMSE 9.83 min) to predict attraction wait times and optimize park logistics. |
+| **Mehmet Fatih Özdemir** | **Market Basket Analysis** | Utilized the Apriori algorithm to uncover menu item correlations and design high-conversion food bundles. |
+| **Kasun Gayashan Pinto Ranwalage** | **Customer Classification** | Built an XGBoost classifier (86% Accuracy) to segment customers and predict season pass purchasing behavior. |
